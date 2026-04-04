@@ -7,7 +7,7 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "Firefly",
+	title: "淡Air",
 
 	// 站点副标题
 	subtitle: "Demo site",
@@ -21,7 +21,6 @@ export const siteConfig: SiteConfig = {
 
 	// 站点关键词
 	keywords: [
-		"Firefly",
 		"Fuwari",
 		"Astro",
 		"ACGN",
