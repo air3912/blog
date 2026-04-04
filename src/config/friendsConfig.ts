@@ -21,7 +21,7 @@ export const friendsConfig: FriendLink[] = [
 	},
 	{
 		title: "维护中",
-		imgurl: "",
+		imgurl: "https://q1.qlogo.cn/g?b=qq&nk=2180327166&s=640",
 		desc: "暂未开启，但是如果愿意的话可以先把你的相关信息交给我，改完就放进来",
 		siteurl: "",
 		tags: ["Blog"],
