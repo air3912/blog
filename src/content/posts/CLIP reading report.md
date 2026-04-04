@@ -3,7 +3,7 @@ title: CLIP reading report
 published: 2026-04-05
 pinned: false
 description: "clip阅读笔记"
-image: ./images/p1.webp
+image: ./images/p2.webp
 tags: [知识分享]
 category: 知识分享
 draft: false
