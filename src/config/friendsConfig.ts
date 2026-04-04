@@ -19,6 +19,15 @@ export const friendsConfig: FriendLink[] = [
 		weight: 10, // 权重，数字越大排序越靠前
 		enabled: false, // 是否启用
 	},
+	{
+		title: "维护中",
+		imgurl: "",
+		desc: "暂未开启，但是如果愿意的话可以先把你的相关信息交给我，改完就放进来",
+		siteurl: "",
+		tags: ["Blog"],
+		weight: 10, // 权重，数字越大排序越靠前
+		enabled: true, // 是否启用
+	},
 ];
 
 // 获取启用的友链并按权重排序
