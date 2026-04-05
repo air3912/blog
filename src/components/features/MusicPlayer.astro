@@ -677,6 +677,19 @@ const widgetId =
         updateVolumeUI();
     }
 
+    function enableFirstInteractionAutoplay() {
+        const startPlayback = () => {
+            if (state.isPlaying || !ui.audio.src) return;
+
+            ui.audio.play()
+                .then(() => updatePlayState(true))
+                .catch(() => {});
+        };
+
+        window.addEventListener('pointerdown', startPlayback, { once: true, capture: true });
+        window.addEventListener('keydown', startPlayback, { once: true, capture: true });
+    }
+
     function updateVolumeUI() {
         const pct = state.isMuted ? 0 : state.lastVolume * 100;
         ui.volBar.style.width = `${pct}%`;
@@ -836,6 +849,7 @@ const widgetId =
     });
 
     init();
+    enableFirstInteractionAutoplay();
 })();
 </script>
 
