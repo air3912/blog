@@ -54,8 +54,6 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			"assets/images/MobileWallpaper/m2.avif",
 			"assets/images/MobileWallpaper/m3.avif",
 			"assets/images/MobileWallpaper/m4.avif",
-			"assets/images/MobileWallpaper/m5.avif",
-			"assets/images/MobileWallpaper/m6.avif",
 		],
 	},
 	// Banner模式特有配置
