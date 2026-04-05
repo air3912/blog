@@ -1,7 +1,7 @@
 ---
 title: initial commit
 published: 2026-04-05
-pinned: false
+pinned: true
 description: "本站建立过程以及一些想法"
 image: ./images/p1.webp
 tags: [日常]
