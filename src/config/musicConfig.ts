@@ -17,7 +17,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	volume: 0.7,
 
 	// 播放模式：'list'=列表循环, 'one'=单曲循环, 'random'=随机播放
-	playMode: "list",
+	playMode: "random",
 
 	// 是否显启用歌词
 	showLyrics: true,
@@ -50,10 +50,52 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	local: {
 		playlist: [
 			{
-				name: "使一颗心免于哀伤",
-				artist: "知更鸟 / HOYO-MiX / Chevy",
-				url: "/assets/music/使一颗心免于哀伤-哼唱.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
+				name: " Stardust",
+				artist: "",
+				url: "/assets/music/Stardust.mp3",
+				cover: "/assets/music/cover/stardust.webp",
+				lrc: "",
+			},
+			{
+				name: "不要死在那个夏天",
+				artist: "",
+				url: "/assets/music/不要死在那个夏天.mp3",
+				cover: "/assets/music/cover/不要死.webp",
+				lrc: "",
+			},
+			{
+				name: "Alter",
+				artist: "",
+				url: "/assets/music/Alter.mp3",
+				cover: "/assets/music/cover/alter.webp",
+				lrc: "",
+			},
+			{
+				name: "死别",
+				artist: "",
+				url: "/assets/music/死别.mp3",
+				cover: "/assets/music/cover/永存.webp",
+				lrc: "",
+			},
+			{
+				name: "独角",
+				artist: "UnicornPhantom",
+				url: "/assets/music/独角.mp3",
+				cover: "/assets/music/cover/独角.webp",
+				lrc: "",
+			},
+			{
+				name: "青さは止んだ",
+				artist: "",
+				url: "/assets/music/青さは止んだ.mp3",
+				cover: "/assets/music/cover/青.webp",
+				lrc: "",
+			},
+			{
+				name: "Luminous Memory",
+				artist: "",
+				url: "/assets/music/Luminous Memory.mp3",
+				cover: "/assets/music/cover/luminous memory.webp",
 				lrc: "",
 			},
 		],
