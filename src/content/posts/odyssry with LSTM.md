@@ -1,6 +1,6 @@
 ---
 title: An odyssey with LSTM
-published: 2026-04-10
+published: 2026-04-13
 pinned: true
 description: "一起看看transformer诞生前LSTM的最高光时刻。论文地址：https://arxiv.org/abs/1503.04069"
 image: ./images/p8.webp
@@ -26,7 +26,6 @@ draft: false
 </details>
 
 - 直接比较，每个变体相较于原版只改变一个结构，便于确定每个架构的重要性（对结果的影响） 
-
 --- 
 对于evaluate部分，按以上方法，作者开始实验。
 
