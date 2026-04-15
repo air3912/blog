@@ -31,12 +31,14 @@ draft: false
 
 1. dataset
 每组数据集分为 training set, validation set, test set.
-
 然后选择了三组数据集，测试三个不同的方向：TIMIT(语音识别)，IAM Online(手写识别)，JSB Chorales(音乐建模)。
+
 2. architectures
 TIMIT 和 IAM 使用的是 Bidirectional LSTM (双向 LSTM)，即一层正向、一层反向处理，最后接 Softmax 输出；而音乐任务使用单向 LSTM
+
 3. Variants
 没有输入门/遗忘门/输出们/输入激活/输出激活/输入和遗忘门耦合/没有peepholes/全部门递归（？
+
 4. Hyperparameter
 在范围内随机搜索，包括Block数量，learning rate, input noise, momentum这些
 
