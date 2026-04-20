@@ -34,7 +34,9 @@ draft: false
 架构上训练了UFO-ViT 和 UFO-InternVL2.5-8B两种以求验证通用性，数据集上有COCO 2017：检测、实例分割;COCO Caption：图像描述;RefCOCO 系列：指代表达理解;ADE20K：语义分割四个
 
 在单任务设置下在检测任务上达到 47.8 mAP（优于 Deformable-DETR），在语义分割上达到 49.5 mIoU（优于 Mask2Former），对比通用模型git，再ADE20K和COCO上也是均有提升。
+
 在细节问题上即使不使用框解码器，UFO在REC任务上也超过了VisionLLM v2约3%，在分割（RES）方面，性能优于使用解码器的 SAM4MLLM
+
 Ablation Study：掩码标记数量，作者这里认为是16个总体更好（再加收益很小。然后是由于目标检测时负样本太多（就是不是目标的一部分，背景图）所以作者采用了beam search。提高了mAP。
 
 ### conclusion
