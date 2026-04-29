@@ -1,7 +1,7 @@
 ---
 title: Deep Residual Learning
 published: 2026-04-15
-pinned: true
+pinned: false
 description: "拜读一下Kaiming He大佬的神作，原文指路：https://arxiv.org/abs/1512.03385"
 image: ./images/p9.webp
 tags: [知识分享]

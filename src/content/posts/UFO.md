@@ -1,7 +1,7 @@
 ---
 title: UFO
 published: 2026-04-19
-pinned: true
+pinned: false
 description: "并非不明飞行物https://arxiv.org/abs/2503.01342"
 image: ./images/p11.webp
 tags: [知识分享]

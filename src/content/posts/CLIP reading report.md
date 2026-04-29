@@ -1,7 +1,7 @@
 ---
 title: CLIP reading report
 published: 2026-04-05
-pinned: true
+pinned: false
 description: "clip阅读笔记"
 image: ./images/p2.webp
 tags: [知识分享]

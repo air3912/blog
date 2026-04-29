@@ -1,7 +1,7 @@
 ---
 title: open-vclip
 published: 2026-04-18
-pinned: true
+pinned: false
 description: "https://arxiv.org/abs/2302.00624"
 image: ./images/p10.webp
 tags: [知识分享]

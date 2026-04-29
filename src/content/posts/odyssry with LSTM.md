@@ -1,7 +1,7 @@
 ---
 title: An odyssey with LSTM
 published: 2026-04-13
-pinned: true
+pinned: false
 description: "一起看看transformer诞生前LSTM的最高光时刻。论文地址：https://arxiv.org/abs/1503.04069"
 image: ./images/p8.webp
 tags: [知识分享]

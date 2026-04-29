@@ -1,7 +1,7 @@
 ---
 title: FIne-tuned CLIP reading report
 published: 2026-04-05
-pinned: true
+pinned: false
 description: "VIFI-Clip阅读笔记"
 image: ./images/p3.webp
 tags: [知识分享]
