@@ -3,7 +3,7 @@ title: An odyssey with LSTM
 published: 2026-05-19
 pinned: false
 description: "111之3D入门"
-image: ./images/p8.webp
+image: ./images/p12.webp
 tags: [知识分享]
 category: 知识分享
 draft: false
