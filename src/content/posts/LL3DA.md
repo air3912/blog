@@ -1,5 +1,5 @@
 ---
-title: An odyssey with LSTM
+title: LL3DA
 published: 2026-05-19
 pinned: false
 description: "111之3D入门"
