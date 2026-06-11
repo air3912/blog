@@ -37,6 +37,15 @@ export const friendsConfig: FriendLink[] = [
 		weight: 10, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
+	{
+		title: "鱼檬檬",
+		imgurl: "https://yumengmeng.cn/assets/avatar.jpg",
+		desc: "只要不停下脚步，道路就会一直延伸",
+		siteurl: "https://yumengmeng.cn",
+		tags: ["Blog"],
+		weight: 10, // 权重，数字越大排序越靠前
+		enabled: true, // 是否启用
+	},
 ];
 
 // 获取启用的友链并按权重排序
