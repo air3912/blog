@@ -263,6 +263,35 @@ const widgetId =
         ui.cover, ui.title, ui.artist, ui.playlistContainer, ui.itemTemplate];
     if (_critical.some(function(el) { return !el; })) return;
 
+    const playbackStorageKey = 'firefly-music-player-state';
+
+    function readPlaybackState() {
+        try {
+            const raw = sessionStorage.getItem(playbackStorageKey);
+            if (!raw) return null;
+
+            const saved = JSON.parse(raw);
+            if (!Number.isInteger(saved.currentIndex) || saved.currentIndex < 0) return null;
+
+            return {
+                currentIndex: saved.currentIndex,
+                currentTime: Number.isFinite(saved.currentTime) && saved.currentTime >= 0
+                    ? saved.currentTime
+                    : 0,
+                isPlaying: saved.isPlaying === true
+            };
+        } catch {
+            return null;
+        }
+    }
+
+    const restoredPlayback = readPlaybackState();
+    let shouldResumeOnInteraction = restoredPlayback
+        ? restoredPlayback.isPlaying
+        : true;
+    let hasUserInteracted = false;
+    let lastPersistedSecond = -1;
+
     const state = {
         playlist: [],
         currentIndex: 0,
@@ -278,6 +307,20 @@ const widgetId =
         isUserScrolling: false,
         scrollTimeout: null
     };
+
+    function persistPlaybackState() {
+        if (!state.playlist.length) return;
+
+        try {
+            sessionStorage.setItem(playbackStorageKey, JSON.stringify({
+                currentIndex: state.currentIndex,
+                currentTime: Number.isFinite(ui.audio.currentTime) ? ui.audio.currentTime : 0,
+                isPlaying: state.isPlaying
+            }));
+        } catch {
+            // Playback still works when storage is unavailable.
+        }
+    }
 
     // Initialize state from config
     if (config.playMode === 'random') {
@@ -410,15 +453,36 @@ const widgetId =
 
             if (state.playlist.length > 0) {
                 renderPlaylist();
-                // If random mode is initial setting, shuffle start
-                let startIndex = 0;
-                if (state.playMode === 2) {
+                const hasRestorableTrack = restoredPlayback
+                    && restoredPlayback.currentIndex < state.playlist.length;
+                let startIndex = hasRestorableTrack ? restoredPlayback.currentIndex : 0;
+                if (!hasRestorableTrack && state.playMode === 2) {
                     startIndex = Math.floor(Math.random() * state.playlist.length);
                 }
                 
                 loadTrack(startIndex, false);
+                if (hasRestorableTrack && restoredPlayback.currentTime > 0) {
+                    const restoreProgress = () => {
+                        if (Number.isFinite(ui.audio.duration)) {
+                            ui.audio.currentTime = Math.min(
+                                restoredPlayback.currentTime,
+                                Math.max(ui.audio.duration - 0.25, 0)
+                            );
+                        }
+                    };
+
+                    if (ui.audio.readyState >= 1) {
+                        restoreProgress();
+                    } else {
+                        ui.audio.addEventListener('loadedmetadata', restoreProgress, { once: true });
+                    }
+                }
                 initVolume();
                 updateModeUI(); // Reflect initial mode in UI
+
+                if (hasUserInteracted) {
+                    startPlaybackAfterInteraction();
+                }
             } else {
                 ui.title.innerText = config.i18n.noSongs;
             }
@@ -678,16 +742,27 @@ const widgetId =
     }
 
     function enableFirstInteractionAutoplay() {
-        const startPlayback = () => {
-            if (state.isPlaying || !ui.audio.src) return;
+        const handleFirstInteraction = (event) => {
+            hasUserInteracted = true;
+            window.removeEventListener('pointerdown', handleFirstInteraction, true);
+            window.removeEventListener('keydown', handleFirstInteraction, true);
 
-            ui.audio.play()
-                .then(() => updatePlayState(true))
-                .catch(() => {});
+            // Controls inside the player already handle playback themselves.
+            if (!ui.widget.contains(event.target)) {
+                startPlaybackAfterInteraction();
+            }
         };
 
-        window.addEventListener('pointerdown', startPlayback, { once: true, capture: true });
-        window.addEventListener('keydown', startPlayback, { once: true, capture: true });
+        window.addEventListener('pointerdown', handleFirstInteraction, { capture: true });
+        window.addEventListener('keydown', handleFirstInteraction, { capture: true });
+    }
+
+    function startPlaybackAfterInteraction() {
+        if (!shouldResumeOnInteraction || state.isPlaying || !ui.audio.src) return;
+
+        ui.audio.play()
+            .then(() => updatePlayState(true))
+            .catch(() => {});
     }
 
     function updateVolumeUI() {
@@ -822,6 +897,12 @@ const widgetId =
             ui.totalTime.innerText = formatTime(duration);
 
             updateLyricSync(currentTime);
+
+            const currentSecond = Math.floor(currentTime);
+            if (currentSecond !== lastPersistedSecond && currentSecond % 2 === 0) {
+                lastPersistedSecond = currentSecond;
+                persistPlaybackState();
+            }
     });
 
     ui.audio.addEventListener('ended', () => playNext(true));
@@ -836,8 +917,19 @@ const widgetId =
     });
 
     ui.audio.addEventListener('play', () => {
+        shouldResumeOnInteraction = true;
+        updatePlayState(true);
+        persistPlaybackState();
         window.dispatchEvent(new CustomEvent('firefly-music-play', { detail: { id: widgetId } }));
     });
+
+    ui.audio.addEventListener('pause', () => {
+        shouldResumeOnInteraction = false;
+        updatePlayState(false);
+        persistPlaybackState();
+    });
+
+    window.addEventListener('beforeunload', persistPlaybackState);
     
     // Seek
     ui.progressContainer.addEventListener('click', (e) => {

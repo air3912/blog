@@ -1,11 +1,11 @@
 ---
-title: Deep Residual Learning
+title: "ResNet：深度残差学习"
 published: 2026-04-15
 pinned: false
-description: "拜读一下Kaiming He大佬的神作，原文指路：https://arxiv.org/abs/1512.03385"
+description: "理解残差连接如何缓解深层网络的退化问题，以及 ResNet 的实验设计与核心结论。"
 image: ./images/p9.webp
-tags: [知识分享]
-category: 知识分享
+tags: ["ResNet", "CNN", "计算机视觉"]
+category: 论文阅读
 draft: false
 ---
 

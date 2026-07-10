@@ -10,23 +10,24 @@ export const siteConfig: SiteConfig = {
 	title: "淡Air",
 
 	// 站点副标题
-	subtitle: "Demo site",
+	subtitle: "AI / CV 学习笔记与个人随想",
 
 	// 站点 URL
 	site_url: "https://air3912.cn",
 
 	// 站点描述
 	description:
-		"Firefly 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。",
+		"淡Air的个人博客，记录人工智能、计算机视觉、深度学习与论文阅读笔记，也分享学习过程中的思考和日常随想。",
 
 	// 站点关键词
 	keywords: [
-		"Fuwari",
-		"Astro",
-		"ACGN",
+		"淡Air",
+		"人工智能",
+		"计算机视觉",
+		"深度学习",
+		"论文阅读",
+		"机器学习",
 		"博客",
-		"技术博客",
-		"静态博客",
 	],
 
 	// 主题色
@@ -101,7 +102,7 @@ export const siteConfig: SiteConfig = {
 	sharePoster: true,
 
 	// OpenGraph图片功能,注意开启后要渲染很长时间，不建议本地调试的时候开启
-	generateOgImages: false,
+	generateOgImages: true,
 
 	// bangumi配置
 	bangumi: {

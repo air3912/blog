@@ -9,7 +9,7 @@ export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.avif",
 
 	// 名字
-	name: "淡air",
+	name: "淡Air",
 
 	// 个人签名
 	bio: "Destiny is set",
@@ -22,7 +22,7 @@ export const profileConfig: ProfileConfig = {
 	// showName: true 时显示图标和名称，false 时只显示图标
 	links: [
 		{
-			name: "Bilibli",
+			name: "Bilibili",
 			icon: "fa7-brands:bilibili",
 			url: "https://space.bilibili.com/1465658799",
 			showName: false,
@@ -36,13 +36,13 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "Email",
 			icon: "fa7-solid:envelope",
-			url: "",
+			url: "mailto:like66@mail2.sysu.edu.cn",
 			showName: false,
 		},
 		{
 			name: "RSS",
 			icon: "fa7-solid:rss",
-			url: "",
+			url: "/rss.xml",
 			showName: false,
 		},
 	],

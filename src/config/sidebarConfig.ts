@@ -49,8 +49,8 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 		{
 			// 组件类型：音乐播放器
 			type: "music",
-			// 是否启用该组件
-			enable: true,
+			// 导航栏已提供全站唯一播放器，避免多个 audio 实例抢占播放状态
+			enable: false,
 			// 组件位置
 			position: "sticky",
 			// 是否在文章详情页显示
@@ -170,8 +170,8 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 		{
 			// 组件类型：音乐播放器
 			type: "music",
-			// 是否启用该组件
-			enable: true,
+			// 移动端复用导航栏播放器，避免重复创建 audio 实例
+			enable: false,
 			// 是否在文章详情页显示
 			showOnPostPage: true,
 		},

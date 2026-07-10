@@ -1,11 +1,11 @@
 ---
-title: initial commit
+title: "博客开张：为什么建立这个网站"
 published: 2026-04-05
 pinned: false
-description: "本站建立过程以及一些想法"
+description: "记录博客的建立过程、名字由来，以及我想在这里留下的内容。"
 image: ./images/p1.webp
-tags: [日常]
-category: 日常
+tags: ["博客", "Astro"]
+category: 站务记录
 draft: false
 ---
 
@@ -18,4 +18,3 @@ draft: false
 不过这个也不单纯是为了分享，更是为了记录，记录自己在计算机这个领域的成长。
 
 最后说说air3912的由来吧，名字融合了air_0364和Yuki_3912，然后Yuki是谁？算是一个emmm看板娘？是我计划以后按自己喜好训练的模型，这意味着以后有机会的话可能会加上一个与Yuki聊天的功能，然后通过它可以更方便的浏览这个blog或者了解我（当然等上线可能要好多年了）
-

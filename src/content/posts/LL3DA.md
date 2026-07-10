@@ -1,11 +1,11 @@
 ---
-title: LL3DA
+title: "LL3DA：让大模型理解三维场景"
 published: 2026-05-19
 pinned: false
-description: "111之3D入门"
+description: "梳理 LL3DA 如何编码三维点云，并融合文本和交互提示完成三维场景理解。"
 image: ./images/p12.webp
-tags: [知识分享]
-category: 知识分享
+tags: ["3D视觉", "点云", "多模态大模型"]
+category: 论文阅读
 draft: false
 ---
 
@@ -297,4 +297,3 @@ mmt_output = q_side[:32]                          # [32, 768]
 
 
 ```
-

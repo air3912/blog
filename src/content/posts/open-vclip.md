@@ -1,11 +1,11 @@
 ---
-title: open-vclip
+title: "Open-VCLIP：兼顾视频理解与零样本能力"
 published: 2026-04-18
 pinned: false
-description: "https://arxiv.org/abs/2302.00624"
+description: "梳理 Open-VCLIP 的时序建模、权重插值与随机权重平均方法。"
 image: ./images/p10.webp
-tags: [知识分享]
-category: 知识分享
+tags: ["CLIP", "视频理解", "持续学习"]
+category: 论文阅读
 draft: false
 ---
 

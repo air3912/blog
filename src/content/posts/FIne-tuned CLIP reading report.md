@@ -1,11 +1,11 @@
 ---
-title: FIne-tuned CLIP reading report
+title: "ViFi-CLIP：用图像模型理解视频"
 published: 2026-04-05
 pinned: false
-description: "VIFI-Clip阅读笔记"
+description: "理解 ViFi-CLIP 如何通过视频微调和视觉语言提示，在保留泛化能力的同时完成视频识别。"
 image: ./images/p3.webp
-tags: [知识分享]
-category: 知识分享
+tags: ["CLIP", "视频理解", "视觉语言模型"]
+category: 论文阅读
 draft: false
 ---
 

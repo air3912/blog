@@ -1,11 +1,11 @@
 ---
-title: An odyssey with LSTM
+title: "LSTM：架构变体与超参数分析"
 published: 2026-04-13
 pinned: false
-description: "一起看看transformer诞生前LSTM的最高光时刻。论文地址：https://arxiv.org/abs/1503.04069"
+description: "梳理 LSTM 架构变体、超参数搜索与组件重要性分析的主要结论。"
 image: ./images/p8.webp
-tags: [知识分享]
-category: 知识分享
+tags: ["LSTM", "循环神经网络", "超参数优化"]
+category: 论文阅读
 draft: false
 ---
 哎哎哎，看这个论文能明显感觉到LSTM在当时的统治级地位，可惜我看时间，就在这个论文出现第二年，transformer就问世了。。。不过LSTM的生态位虽然很大部分都被挤占了，但是相比transformer的n方级时间复杂度，LSTM在现在处理一些特别长的数据的时候依旧有自己的优势吧，应该吧hhh

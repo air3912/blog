@@ -75,12 +75,9 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			titleSize: "2.8rem",
 			// 主页横幅副标题
 			subtitle: [
-				"Stop paying the price for your ignorance, that's pathetic.",
-				"Time, stop for a monment.",
-				"Amidst Silenced Stars, I Deep Sleep",
-				"Upon Lighted Fyrefly, I Soon Gaze",
-				"From Undreamt Night, I Thence Shine",
-				"In Finalized Morrow, I Full Bloom",
+				"答案尚未抵达。",
+				"在模型与世界之间。",
+				"Toward the intelligence I imagined.",
 			],
 			// 主页横幅副标题字体大小
 			subtitleSize: "1.5rem",

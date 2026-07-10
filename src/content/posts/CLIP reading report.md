@@ -1,11 +1,11 @@
 ---
-title: CLIP reading report
+title: "CLIP：自然语言监督与零样本迁移"
 published: 2026-04-05
 pinned: false
-description: "clip阅读笔记"
+description: "梳理 CLIP 的训练方法、零样本迁移能力、实验设计与局限。"
 image: ./images/p2.webp
-tags: [知识分享]
-category: 知识分享
+tags: ["CLIP", "视觉语言模型", "零样本学习"]
+category: 论文阅读
 draft: false
 ---
 

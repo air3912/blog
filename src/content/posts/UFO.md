@@ -1,11 +1,11 @@
 ---
-title: UFO
+title: "UFO：用语言接口统一检测与分割"
 published: 2026-04-19
 pinned: false
-description: "并非不明飞行物https://arxiv.org/abs/2503.01342"
+description: "梳理 UFO 如何用统一语言接口完成目标检测、实例分割和语义分割。"
 image: ./images/p11.webp
-tags: [知识分享]
-category: 知识分享
+tags: ["多模态大模型", "目标检测", "图像分割"]
+category: 论文阅读
 draft: false
 ---
 
