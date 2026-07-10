@@ -40,7 +40,7 @@ const playerConfigStr = JSON.stringify({
 	mode: config.mode,
 	meting: config.meting,
 	localPlaylist: localPlaylist,
-	volume: config.volume ?? 0.7,
+	volume: config.volume ?? 0.3,
 	playMode: config.playMode ?? "list",
 	showLyrics: config.showLyrics ?? true,
 	i18n: {
@@ -300,7 +300,7 @@ const widgetId =
         playMode: 0, // 0: List, 1: One, 2: Rand
         lastVolume: localStorage.getItem('music-player-volume') !== null 
             ? parseFloat(localStorage.getItem('music-player-volume')) 
-            : (config.volume ?? 0.7),
+            : (config.volume ?? 0.3),
         isMuted: false,
         lyrics: [], // Parsed lyrics: {time: seconds, text: string}
         currentLrcIndex: -1,
