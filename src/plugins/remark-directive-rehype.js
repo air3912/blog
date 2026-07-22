@@ -30,6 +30,11 @@ const ADMONITION_TYPES = [
 	"cite",
 ];
 
+const COLLAPSIBLE_DIRECTIVES = {
+	fold: "-",
+	"fold-open": "+",
+};
+
 export function parseDirectiveNode() {
 	return (tree) => {
 		visit(tree, (node) => {
@@ -44,9 +49,11 @@ export function parseDirectiveNode() {
 				// 仅对 containerDirective 进行 Admonition 转换
 				if (
 					node.type === "containerDirective" &&
-					ADMONITION_TYPES.includes(name)
+					(ADMONITION_TYPES.includes(name) || name in COLLAPSIBLE_DIRECTIVES)
 				) {
-					const type = name.toUpperCase();
+					const isCollapsible = name in COLLAPSIBLE_DIRECTIVES;
+					const type = isCollapsible ? "NOTE" : name.toUpperCase();
+					const marker = `[!${type}]${isCollapsible ? COLLAPSIBLE_DIRECTIVES[name] : ""}`;
 
 					// 处理 label (自定义标题)
 					const firstChild = node.children[0];
@@ -56,18 +63,18 @@ export function parseDirectiveNode() {
 							firstChild.children.length > 0 &&
 							firstChild.children[0].type === "text"
 						) {
-							firstChild.children[0].value = `[!${type}] ${firstChild.children[0].value}`;
+							firstChild.children[0].value = `${marker} ${firstChild.children[0].value}`;
 						} else {
 							firstChild.children.unshift({
 								type: "text",
-								value: `[!${type}] `,
+								value: `${marker} `,
 							});
 						}
 					} else {
-						// 没有 label，插入包含 [!TYPE] 的新段落作为第一个子节点
+						// 没有 label，插入包含 callout marker 的新段落作为第一个子节点
 						node.children.unshift({
 							type: "paragraph",
-							children: [{ type: "text", value: `[!${type}]` }],
+							children: [{ type: "text", value: marker }],
 						});
 					}
 
