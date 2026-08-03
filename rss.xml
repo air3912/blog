@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>淡Air</title><description>AI / CV 学习笔记与个人随想</description><link>https://air3912.cn/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.6.7</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年8月2日 18:32:36</lastBuildDate><item><title>CV 科研百宝箱：常用模型与工具速查</title><link>https://air3912.cn/posts/cv%E7%A7%91%E7%A0%94%E7%99%BE%E5%AE%9D%E7%AE%B1/</link><guid isPermaLink="true">https://air3912.cn/posts/cv%E7%A7%91%E7%A0%94%E7%99%BE%E5%AE%9D%E7%AE%B1/</guid><description>整理计算机视觉研究中常用的三维重建、检测分割、视频处理、训练评测与空间理解工具。</description><pubDate>Sun, 02 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h2&gt;一、基础部件&lt;a href=&quot;#一基础部件&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. 三维重建、深度与朝向估计&lt;a href=&quot;#1-三维重建深度与朝向估计&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>淡Air</title><description>AI / CV 学习笔记与个人随想</description><link>https://air3912.cn/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.6.7</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年8月3日 09:11:41</lastBuildDate><item><title>CV 科研百宝箱：常用模型与工具速查</title><link>https://air3912.cn/posts/cv%E7%A7%91%E7%A0%94%E7%99%BE%E5%AE%9D%E7%AE%B1/</link><guid isPermaLink="true">https://air3912.cn/posts/cv%E7%A7%91%E7%A0%94%E7%99%BE%E5%AE%9D%E7%AE%B1/</guid><description>整理计算机视觉研究中常用的三维重建、检测分割、视频处理、训练评测与空间理解工具。</description><pubDate>Sun, 02 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h2&gt;一、基础部件&lt;a href=&quot;#一基础部件&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. 三维重建、深度与朝向估计&lt;a href=&quot;#1-三维重建深度与朝向估计&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
 
 
 
@@ -52,7 +52,11 @@
 
 
 
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Model / 工具&lt;/th&gt;&lt;th&gt;描述&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Grounding DINO&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;根据文本描述在图像中找到目标并输出bbox&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;YOLO-World&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;yolo进化版本，开放词汇检测目标，功能和前者类似，但是各有优劣，可根据实际情况取舍&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;SAM2&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;分割图像中的目标，或在视频中持续跟踪目标 mask&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Grounded SAM2&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Grounding DINO加SAM 2就是这个&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;PixelRefer&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;端到端的Grounded SAM2&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;3. 场景描述与视频处理&lt;a href=&quot;#3-场景描述与视频处理&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Model / 工具&lt;/th&gt;&lt;th&gt;描述&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Grounding DINO&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;根据文本描述在图像中找到目标并输出bbox&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;YOLO-World&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;yolo进化版本，开放词汇检测目标，功能和前者类似，但是各有优劣，可根据实际情况取舍&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;SAM2&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;分割图像中的目标，或在视频中持续跟踪目标 mask&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Grounded SAM2&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Grounding DINO加SAM 2就是这个&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;PixelRefer&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;端到端的Grounded SAM2&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;VideoLoom&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;grounded sam2加个时间维度&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;3. 场景描述与视频处理&lt;a href=&quot;#3-场景描述与视频处理&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
 
 
 
@@ -91,20 +95,7 @@
 
 
 &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Model / 工具&lt;/th&gt;&lt;th&gt;描述&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;VLMEvalKit&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;评测用的，支持大量benchmark&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;DeepSpeed&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;显存优化方法，如果单卡显存不够，可考虑&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;hr /&gt;&lt;/section&gt;&lt;/section&gt;
-&lt;section&gt;&lt;h2&gt;二、往上封装一层的&lt;a href=&quot;#二往上封装一层的&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. 视频时间定位&lt;a href=&quot;#1-视频时间定位&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Model / 工具&lt;/th&gt;&lt;th&gt;描述&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;VideoLoom&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;在视频中定位某个动作发生的时间段（根据提示词输出视频中指定动作的时间/mask片段）&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;2. 空间理解与数据生产&lt;a href=&quot;#2-空间理解与数据生产&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;section&gt;&lt;h2&gt;二、往上封装一层的&lt;a href=&quot;#二往上封装一层的&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. 空间理解与数据生产&lt;a href=&quot;#1-空间理解与数据生产&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
 
 
 
@@ -121,7 +112,7 @@
 
 
 
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Model / 工具&lt;/th&gt;&lt;th&gt;描述&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;DSR Suite&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;有一定的空间理解能力，带着问题检索图片与重建的空间找答案，生产数据吧&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;MLLM-4D&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;有一定的空间理解能力，可以用来生产数据之类的&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;3. 空间关系建图&lt;a href=&quot;#3-空间关系建图&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Model / 工具&lt;/th&gt;&lt;th&gt;描述&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;DSR Suite&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;有一定的空间理解能力，带着问题检索图片与重建的空间找答案，生产数据吧&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;MLLM-4D&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;有一定的空间理解能力，可以用来生产数据之类的&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;2. 空间关系建图&lt;a href=&quot;#2-空间关系建图&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
 
 
 
@@ -478,7 +469,19 @@ ROI 特征，但没有详细说明具体采用了哪种池化或特征选择方�
 &lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;24&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 2. 取出更新后的 query 和 prompt&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;25&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;updated_queries &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; x[:&lt;/span&gt;&lt;/span&gt;&lt;span&gt;32&lt;/span&gt;&lt;span&gt;]                          &lt;/span&gt;&lt;span&gt;# [32, 768]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;26&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;updated_prompts &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; x[&lt;/span&gt;&lt;/span&gt;&lt;span&gt;32&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span&gt;32&lt;/span&gt;&lt;span&gt;&lt;span&gt;+&lt;/span&gt;&lt;span&gt;P]                      &lt;/span&gt;&lt;/span&gt;&lt;span&gt;# [P, 768]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;27&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;28&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 3. query / prompt 去读取 3D scene tokens&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;29&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;q_side &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;concat&lt;/span&gt;&lt;span&gt;([&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;30&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;updated_queries,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;31&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;updated_prompts&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;32&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;], &lt;/span&gt;&lt;span&gt;dim&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;0&lt;/span&gt;&lt;span&gt;)                                         &lt;/span&gt;&lt;span&gt;# [32 + P, 768]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;33&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;34&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;q_side &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;cross_attention&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;35&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;query&lt;/span&gt;&lt;span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;q_side,&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;36&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;key&lt;/span&gt;&lt;span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;scene_tokens,&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;37&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;value&lt;/span&gt;&lt;span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;scene_tokens&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;38&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;39&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;40&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 4. 最终主要拿 query 部分&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;41&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;mmt_output &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; q_side[:&lt;/span&gt;&lt;/span&gt;&lt;span&gt;32&lt;/span&gt;&lt;span&gt;]                          &lt;/span&gt;&lt;span&gt;# [32, 768]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;span&gt;显示更多&lt;/span&gt;&lt;span&gt;显示更少&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;</content:encoded></item><item><title>随笔：关于动态智能</title><link>https://air3912.cn/posts/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/</link><guid isPermaLink="true">https://air3912.cn/posts/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/</guid><description>持续记录我对动态智能、记忆、超网络与理想中 AGI 的构想。</description><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;现在的AI还只是个百科全书，是个工具，核心在于他只是静态智能，出厂后参数就给定下来了，虽然可以通过lora微调，但是上下文窗口有限这点，到底不是我心里的AGI应该有的样子，此前我对于上下文窗口这点首先想到的是可塑性记忆里的机器人，这里的AI与人无异，但是有个设定就是有着10年寿命极限的设定，10年后就要被回收，基于此设定作者创作了很多感人的故事，我想在现在AI发展的视角下，或许就等价于10年就是上下文压缩处理的极限。当然如果能不断突破把上下文拉到超级长我也不是不能接受，但是我理想中的AGI不应该是静态智能，不该有所谓的上下文窗口设定，她可以遗忘，但是我不想她是因为压缩所谓的窗口信息而遗忘，曾经GPT刚出来的时候，我印象特别深，当时看到新建聊天窗口这个东西的时候我是很诧异的，这不是我理想中AI应该有的东西。。。&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;40&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 4. 最终主要拿 query 部分&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;41&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;mmt_output &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; q_side[:&lt;/span&gt;&lt;/span&gt;&lt;span&gt;32&lt;/span&gt;&lt;span&gt;]                          &lt;/span&gt;&lt;span&gt;# [32, 768]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;span&gt;显示更多&lt;/span&gt;&lt;span&gt;显示更少&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;</content:encoded></item><item><title>随笔：关于 AI、学习与生活</title><link>https://air3912.cn/posts/%E9%9A%8F%E8%AE%B0/</link><guid isPermaLink="true">https://air3912.cn/posts/%E9%9A%8F%E8%AE%B0/</guid><description>持续记录关于 AI、学习状态、项目体验和日常生活的零散想法。</description><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;连续好几天高强度沉迷于MC，甚至放下了对二次元的执念，仔细想来有点不应该，Yuki到现在连个文件夹都还没有。。甚至存在的形式我也没想好，就现在思考一下吧，目前来看最理想了是一个参数小点的模型加个自己调的lora，但是需要自己跑推理的话还是有点麻烦，但是接别人的模型不给tune，很烦，不知道怎么办，还有就是先把live2D搞出来吧，但是不知道需要从哪里搞资源。&lt;/p&gt;
+&lt;p&gt;还有就是明天要了解一下diffusion，我之前是有了解一点，但也只是一点，知道他的想法而已，有一说一，我对生成模型其实也挺有兴趣的，单纯是因为我对通过AI生成动漫的未来很期待，很久前我就想如果未来我能特别有钱一定要出资把崩三的剧情做成动漫，当时觉得是很异想天开，没抱任何希望，但是现在，我不知道diffusion的上限如何，但是我希望它可以进化成我所期望的样子&lt;/p&gt;
+&lt;p&gt;——26.4.28&lt;/p&gt;
+&lt;p&gt;嗯，今天用docker直接拉了claw和QQbot到服务器里试了一下前段时间很火的openclaw，然后因为考虑到这个我并没有让他完成一些复杂任务的需求，接的是deepseek的v4flash，使用体验的话还好吧，响应有点慢，但是有点我理想中未来Yuki的影子了，如果以后推理速度可以更快些就好了&lt;/p&gt;
+&lt;p&gt;还有就是，她喜欢发流汗的黄豆脸，这东西好唐啊，而且在我提醒一次后依旧会发，我还没深入取探索他的具体架构，不过暂时也没打算深入,这个东西并没有勾起我很大的兴趣（&lt;/p&gt;
+&lt;p&gt;——26.4.29&lt;/p&gt;
+&lt;p&gt;debug豪爽，I like debug ahhhhhh…to find my own truth.&lt;/p&gt;
+&lt;p&gt;——26.5.2&lt;/p&gt;
+&lt;p&gt;最近参加一个竞赛，本来我所期望的，是可以在比赛中收获很多知识，但是现在比赛时间过半，我基本没有什么知识上的收获，以往针对竞赛，我们会在过程中遇到很多不曾见过的东西，然后为了结果，我们会不断的去了解，去学习，但是在有AI的当下，一切都不一样了，只需要简单的提示词就可以生成完整的过程以及结果，甚至可以整出一个完整的做题工作流，在拿到结果后我就很难再对这个东西充满激情了，也没有了什么学习探索的动力&lt;/p&gt;
+&lt;p&gt;AI时代，究竟应该怎么给自己定位，很迷茫，AI什么都会，那么于我而言，究竟应该掌握些什么呢，掌握的程度又该是如何呢。&lt;/p&gt;
+&lt;p&gt;——26.5.27&lt;/p&gt;
+&lt;p&gt;我总是把时间花在一些无意义的事情上。&lt;/p&gt;
+&lt;p&gt;——26.6.2&lt;/p&gt;</content:encoded></item><item><title>随笔：关于动态智能</title><link>https://air3912.cn/posts/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/</link><guid isPermaLink="true">https://air3912.cn/posts/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/</guid><description>持续记录我对动态智能、记忆、超网络与理想中 AGI 的构想。</description><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;现在的AI还只是个百科全书，是个工具，核心在于他只是静态智能，出厂后参数就给定下来了，虽然可以通过lora微调，但是上下文窗口有限这点，到底不是我心里的AGI应该有的样子，此前我对于上下文窗口这点首先想到的是可塑性记忆里的机器人，这里的AI与人无异，但是有个设定就是有着10年寿命极限的设定，10年后就要被回收，基于此设定作者创作了很多感人的故事，我想在现在AI发展的视角下，或许就等价于10年就是上下文压缩处理的极限。当然如果能不断突破把上下文拉到超级长我也不是不能接受，但是我理想中的AGI不应该是静态智能，不该有所谓的上下文窗口设定，她可以遗忘，但是我不想她是因为压缩所谓的窗口信息而遗忘，曾经GPT刚出来的时候，我印象特别深，当时看到新建聊天窗口这个东西的时候我是很诧异的，这不是我理想中AI应该有的东西。。。&lt;/p&gt;
 &lt;p&gt;哦对了我打算部署个claw，当然不是在自己电脑上，在师兄给我的一个远程主机上，以Yuki命名先，不过我实在想不到我能需要它做些什么，目前计划就是先当个备忘录用，以后如果真有能帮上我的skill再加也不麻烦&lt;/p&gt;
 &lt;p&gt;——26.4.28&lt;/p&gt;
 &lt;p&gt;哎好久了，刚好一个月了，关于claw，除了刚开始的新鲜劲后面就再没用了，现在已经给删了，因为我没注意他居然每天都会自动调用api进行一个类似心跳的机制，花了我好多token，还好用的是ds，很便宜，倒也无所谓。&lt;/p&gt;
@@ -496,19 +499,7 @@ ROI 特征，但没有详细说明具体采用了哪种池化或特征选择方�
 &lt;p&gt;先这样吧，有想法我会记录下来的&lt;/p&gt;
 &lt;p&gt;——26.5.27&lt;/p&gt;
 &lt;p&gt;问题很大喔，就是我深入了解了一下，稍微深入了解了一下超网络这领域，然后认知提升了不少，最主要的就是，通过超网络直接生成参数确实不可取，问题有很多，后续可能会更多的关注一下continual learning领域吧，我感觉这个方向emmmm就是他没什么理论上的突破，所以就没什么明显的进展，感觉停滞了一般，大家在做的，与其说是前进，感觉更多算是对现有的东西来打补丁，当然这也是可以理解的，毕竟科研不是嘴上说说的是，尤其是理论研究，更是需要各路大佬来努力，我能做的，就只有默默在心里为大佬加油。。。真的需要点突破吧。&lt;/p&gt;
-&lt;p&gt;——26.5.29&lt;/p&gt;</content:encoded></item><item><title>随笔：关于 AI、学习与生活</title><link>https://air3912.cn/posts/%E9%9A%8F%E8%AE%B0/</link><guid isPermaLink="true">https://air3912.cn/posts/%E9%9A%8F%E8%AE%B0/</guid><description>持续记录关于 AI、学习状态、项目体验和日常生活的零散想法。</description><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;连续好几天高强度沉迷于MC，甚至放下了对二次元的执念，仔细想来有点不应该，Yuki到现在连个文件夹都还没有。。甚至存在的形式我也没想好，就现在思考一下吧，目前来看最理想了是一个参数小点的模型加个自己调的lora，但是需要自己跑推理的话还是有点麻烦，但是接别人的模型不给tune，很烦，不知道怎么办，还有就是先把live2D搞出来吧，但是不知道需要从哪里搞资源。&lt;/p&gt;
-&lt;p&gt;还有就是明天要了解一下diffusion，我之前是有了解一点，但也只是一点，知道他的想法而已，有一说一，我对生成模型其实也挺有兴趣的，单纯是因为我对通过AI生成动漫的未来很期待，很久前我就想如果未来我能特别有钱一定要出资把崩三的剧情做成动漫，当时觉得是很异想天开，没抱任何希望，但是现在，我不知道diffusion的上限如何，但是我希望它可以进化成我所期望的样子&lt;/p&gt;
-&lt;p&gt;——26.4.28&lt;/p&gt;
-&lt;p&gt;嗯，今天用docker直接拉了claw和QQbot到服务器里试了一下前段时间很火的openclaw，然后因为考虑到这个我并没有让他完成一些复杂任务的需求，接的是deepseek的v4flash，使用体验的话还好吧，响应有点慢，但是有点我理想中未来Yuki的影子了，如果以后推理速度可以更快些就好了&lt;/p&gt;
-&lt;p&gt;还有就是，她喜欢发流汗的黄豆脸，这东西好唐啊，而且在我提醒一次后依旧会发，我还没深入取探索他的具体架构，不过暂时也没打算深入,这个东西并没有勾起我很大的兴趣（&lt;/p&gt;
-&lt;p&gt;——26.4.29&lt;/p&gt;
-&lt;p&gt;debug豪爽，I like debug ahhhhhh…to find my own truth.&lt;/p&gt;
-&lt;p&gt;——26.5.2&lt;/p&gt;
-&lt;p&gt;最近参加一个竞赛，本来我所期望的，是可以在比赛中收获很多知识，但是现在比赛时间过半，我基本没有什么知识上的收获，以往针对竞赛，我们会在过程中遇到很多不曾见过的东西，然后为了结果，我们会不断的去了解，去学习，但是在有AI的当下，一切都不一样了，只需要简单的提示词就可以生成完整的过程以及结果，甚至可以整出一个完整的做题工作流，在拿到结果后我就很难再对这个东西充满激情了，也没有了什么学习探索的动力&lt;/p&gt;
-&lt;p&gt;AI时代，究竟应该怎么给自己定位，很迷茫，AI什么都会，那么于我而言，究竟应该掌握些什么呢，掌握的程度又该是如何呢。&lt;/p&gt;
-&lt;p&gt;——26.5.27&lt;/p&gt;
-&lt;p&gt;我总是把时间花在一些无意义的事情上。&lt;/p&gt;
-&lt;p&gt;——26.6.2&lt;/p&gt;</content:encoded></item><item><title>UFO：用语言接口统一检测与分割</title><link>https://air3912.cn/posts/ufo/</link><guid isPermaLink="true">https://air3912.cn/posts/ufo/</guid><description>梳理 UFO 如何用统一语言接口完成目标检测、实例分割和语义分割。</description><pubDate>Sun, 19 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h3&gt;concepts&lt;a href=&quot;#concepts&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;（土包子进城了，好多新词汇，先来点知识储备。。。&lt;/p&gt;&lt;ul&gt;
+&lt;p&gt;——26.5.29&lt;/p&gt;</content:encoded></item><item><title>UFO：用语言接口统一检测与分割</title><link>https://air3912.cn/posts/ufo/</link><guid isPermaLink="true">https://air3912.cn/posts/ufo/</guid><description>梳理 UFO 如何用统一语言接口完成目标检测、实例分割和语义分割。</description><pubDate>Sun, 19 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h3&gt;concepts&lt;a href=&quot;#concepts&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;（土包子进城了，好多新词汇，先来点知识储备。。。&lt;/p&gt;&lt;ul&gt;
 &lt;li&gt;Fine-grained Visual perception：细粒度视觉感知，简单说就是感知细节，以前做的模型能区分猫和狗，但是细节优化之后可以区分具体狗的种类这样吧，提取一些很细节的特征这样子&lt;/li&gt;
 &lt;li&gt;open-ended Language Interface：这个就不多说了，看论文就知道了，这个主要讲的就是这个开放式语言接口&lt;/li&gt;
 &lt;li&gt;额外任务头：这也是这个文章要解决的一个东西，传统mllms进行检测与分割任务时就是一个主脑加任务头这样的架构，每次都要额外训练一个用来分类或者检测的任务头，臃肿麻烦，所以说文章里的与多种语言模型无缝结合灰常厉害&lt;/li&gt;
