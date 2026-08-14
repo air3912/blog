@@ -45,7 +45,7 @@ GRPO的做法是记r=（ref生成token的概率/$\theta$ 生成这个token的概
 
 ### 3. 将Reward归一化的合理性
 
-首先是减平均值，不会对策略梯度的方向产生影响。然后是除标准差，Z-Score 标准化。
+首先是减均值，不会对策略梯度期望的方向产生影响（这里常数与策略梯度想乘之后，这个策略梯度合并之后是稳定为0的）。然后是除标准差，Z-Score 标准化。
 
 
 ### 4. 优势函数A的些许限制
@@ -64,3 +64,31 @@ GRPO的做法是记r=（ref生成token的概率/$\theta$ 生成这个token的概
 
 --- 
 此外，我感觉这个RL还是要适当用，当作工具的话，怎么强化无所谓，但是对于人类而言，人和人之间是会有很多弱智对话的，想要拟人的话，不能把弱智答案全拉下去了hhh
+
+
+### And finally
+
+虽然这里不会堆列任何推导公式，不过还是列举出建议掌握的部分公式推导
+
+策略梯度公式推导（以PPO中的R为例，GRPO自行换成A即可，和$\theta$无关，随便换：
+
+\[
+J(\theta)
+=
+\mathbb{E}[R]
+\rightarrow
+\sum_{\tau} P_\theta(\tau)R(\tau)
+\rightarrow
+\sum_{\tau} R(\tau)\nabla_\theta P_\theta(\tau)
+\rightarrow
+\sum_{\tau} P_\theta(\tau)R(\tau)\nabla_\theta \log P_\theta(\tau)
+\rightarrow
+\mathbb{E}_{\tau \sim \pi_\theta}
+\left[
+R(\tau)
+\sum_t
+\nabla_\theta \log \pi_\theta(a_t \mid s_t)
+\right]
+\]
+
+核心在于$P$的梯度与$\log{P}$梯度的关系
