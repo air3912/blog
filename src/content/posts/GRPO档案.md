@@ -20,9 +20,28 @@ draft: false
 
 ## 二·GRPO基础
 
+
+
+简单来说，就是在PPO的Clip目标上，用组内标准化后的奖励作为优势，并额外加入KL惩罚。
+
 GRPO一句话概括可以是在PPO的基础上，通过同时跑多组（Group）回答，将组内回答的Reward得分归一化计算均值，然后通过计算每个回答与均值的差值作为优势，以此替代Critic
 
 同时，在KL散度约束公式上采用的公式也有所不同。
+
+公式长这样：
+
+$$
+\begin{aligned}
+J_{\mathrm{GRPO}}(\theta)
+&=\mathbb{E}\left[
+\min\left(
+r(\theta)\hat A,
+\operatorname{clip}\big(r(\theta),1-\epsilon,1+\epsilon\big)\hat A
+\right)
+-\beta D_{\mathrm{KL}}\left(\pi_\theta\,\|\,\pi_{\mathrm{ref}}\right)
+\right]
+\end{aligned}
+$$
 
 
 ## 三·GRPO细节展开
@@ -70,25 +89,21 @@ GRPO的做法是记r=（ref生成token的概率/$\theta$ 生成这个token的概
 
 虽然这里不会堆列任何推导公式，不过还是列举出建议掌握的部分公式推导
 
-策略梯度公式推导（以PPO中的R为例，GRPO自行换成A即可，和$\theta$无关，随便换：
+策略梯度公式精推导（以PPO中的R为例，GRPO自行换成A即可，和$\theta$无关，随便换：
 
-\[
+$$
+\begin{aligned}
 J(\theta)
-=
-\mathbb{E}[R]
-\rightarrow
-\sum_{\tau} P_\theta(\tau)R(\tau)
-\rightarrow
-\sum_{\tau} R(\tau)\nabla_\theta P_\theta(\tau)
-\rightarrow
-\sum_{\tau} P_\theta(\tau)R(\tau)\nabla_\theta \log P_\theta(\tau)
-\rightarrow
-\mathbb{E}_{\tau \sim \pi_\theta}
+&= \mathbb{E}[R]
+= \sum_{\tau} P_\theta(\tau)R(\tau), \\
+\nabla_\theta J(\theta)
+&= \sum_{\tau} R(\tau)\nabla_\theta P_\theta(\tau) \\
+&= \sum_{\tau} P_\theta(\tau)R(\tau)\nabla_\theta \log P_\theta(\tau) \\
+&= \mathbb{E}_{(s,a) \sim \pi_\theta}
 \left[
-R(\tau)
-\sum_t
-\nabla_\theta \log \pi_\theta(a_t \mid s_t)
+\nabla_\theta \log \pi_\theta(a \mid s) \cdot R
 \right]
-\]
+\end{aligned}
+$$
 
 核心在于$P$的梯度与$\log{P}$梯度的关系
