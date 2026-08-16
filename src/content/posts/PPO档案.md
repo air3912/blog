@@ -27,14 +27,14 @@ PPO相较于GRPO要复杂一步，所以这里再单开一页写一些PPO里除G
 - $V(s_t)$：由Critic输出，输入当前state，然后输出当前环境下预测出的得分
 
 
-- $\delta_t$：TD误差，所以这个数值表达生成这个 Token 前后，预期得分的变化量，$\gamma$为折扣因子
+- $\delta_t$：TD误差，可以视作局部优势，所以这个数值表达生成这个 Token 前后，预期得分的变化量，$\gamma$为折扣因子
 
 
 
 
-- $A_t$：$G_t-V(s_t)$，逐词计算advantage（本质上也是$\gamma$取1的情况下，后续所有TD error的总和）。
+- $A_t$：逐词计算advantage（本质上也是$\gamma$取1的情况下，后续所有TD error的总和）。
 
-- GAE：将当前和后续的TD误差按$(\gamma\lambda)$进行折扣累加，$\lambda$也是一个衰减因子，常取0.95.
+- GAE：单独用TD error只顾及眼前，稍显局限，所以这里计算的综合长远优势。将当前和后续的TD误差按$(\gamma\lambda)$进行折扣累加，$\lambda$也是一个衰减因子，常取0.95.时间差越久影响关系越弱。
 
 
 
