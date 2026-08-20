@@ -5,7 +5,7 @@ export const announcementConfig: AnnouncementConfig = {
 	title: "公告",
 
 	// 公告内容
-	content: "Welcome, Enjoy your day!",
+	content: "Welcome, Enjoy your day!\n中山大学｜2025级计算机科学与技术",
 
 	// 是否允许用户关闭公告
 	closable: true,
