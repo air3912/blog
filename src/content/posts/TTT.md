@@ -3,6 +3,7 @@ title: "Test-Time Training（TTT）"
 published: 2026-08-21
 pinned: false
 description: "梳理 Original TTT、TTT-Layer 与 LaCT（TTT Done Right）的核心思路。"
+image: ./images/p22.webp
 tags: ["Test-Time Training", "TTT", "深度学习"]
 category: 学习笔记
 draft: false
