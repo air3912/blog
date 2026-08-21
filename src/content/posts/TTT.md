@@ -35,3 +35,8 @@ draft: false
 ## 三、TTT Done Right
 
 ICLR 2026的LaCT，TTT落地的最后一块拼图，会有这么巧的事吗，这命中注定的感觉，感谢前人，感谢LaCT，感谢提出LaCT的作者恰好在2026这个我入门的节点将TTT完善，而我又恰好在这个节点偶然了解到这个TTT，这太美妙了，简直就是命中注定。
+
+大概就是一次处理一整个chunk，然后输入分两路，一边进行全局Attention，另一边则是走TTT，输出直接相加，计算Loss，反向传播。但是这么处理也有问题，就是他一整个chunk更新一次内部权重，这就导致了，于是（比如这里处理的是从5到8这四个token，第5个token进行query的时候，权重是记忆了后面三个token的信息的，所以在causal方面有所局限。
+
+所以呢就是这里全局注意力是用的是SWA（sliding Window Attention，计算注意力时只和最近w个K/V做attention。），通过SWA实现简单的causal，然后这个长度w>=chunk长度
+
