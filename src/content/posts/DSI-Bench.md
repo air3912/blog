@@ -3,7 +3,7 @@ title: "DSI-Bench：动态空间智能评测基准"
 published: 2026-07-16
 pinned: false
 description: "梳理 DSI-Bench 的动态空间智能任务、时空对称评测方法与主要实验结论。"
-image: ./images/p10.webp
+image: ./images/24efd796e2577c01ab266c92c94c8469.jpg
 tags: ["空间智能", "视频理解", "多模态大模型"]
 category: 论文阅读
 draft: false

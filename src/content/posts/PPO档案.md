@@ -3,7 +3,7 @@ title: "PPO method"
 published: 2026-08-15
 pinned: false
 description: "梳理 PPO 在大语言模型强化学习中的状态、Critic、TD 误差、累计回报与 GAE 优势估计。"
-image: ./images/p21.webp
+image: ./images/4db076237714e86404216a3a0543cead.jpg
 tags: ["强化学习", "PPO", "Critic", "GAE", "大语言模型"]
 category: 学习笔记
 draft: false

@@ -3,7 +3,7 @@ title: "VSI-Bench：评测模型的视觉空间智能"
 published: 2026-07-14
 pinned: false
 description: "梳理 VSI-Bench 的八类空间推理任务、评估方法与多模态大模型的主要表现。"
-image: ./images/p9.webp
+image: ./images/77f163c0602ddbc2166ea8412b754726.jpg
 tags: ["空间智能", "视频理解", "多模态大模型"]
 category: 论文阅读
 draft: false

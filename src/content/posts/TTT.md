@@ -3,7 +3,7 @@ title: "Test-Time Training（TTT）"
 published: 2026-08-21
 pinned: false
 description: "梳理 Original TTT、TTT-Layer 与 LaCT（TTT Done Right）的核心思路。"
-image: ./images/p22.webp
+image: ./images/4ec0adba1f1d2e353005cfa557b83aea.jpg
 tags: ["Test-Time Training", "TTT", "深度学习"]
 category: 学习笔记
 draft: false
@@ -39,4 +39,3 @@ ICLR 2026的LaCT，TTT落地的最后一块拼图，会有这么巧的事吗，�
 大概就是一次处理一整个chunk，然后输入分两路，一边进行全局Attention，另一边则是走TTT，输出直接相加，计算Loss，反向传播。但是这么处理也有问题，就是他一整个chunk更新一次内部权重，这就导致了，于是（比如这里处理的是从5到8这四个token，第5个token进行query的时候，权重是记忆了后面三个token的信息的，所以在causal方面有所局限。
 
 所以呢就是这里全局注意力是用的是SWA（sliding Window Attention，计算注意力时只和最近w个K/V做attention。），通过SWA实现简单的causal，然后这个长度w>=chunk长度
-

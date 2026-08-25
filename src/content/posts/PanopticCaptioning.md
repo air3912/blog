@@ -3,7 +3,7 @@ title: "Panoptic Captioning：用结构化描述连接图像与文本"
 published: 2026-07-24
 pinned: false
 description: "梳理 Panoptic Captioning 的 PancapEngine、PancapScore 与 PancapChain，理解精确图像描述的生成和评估。"
-image: ./images/p4.webp
+image: ./images/5736ec77a4884a4fda3489911f14a267.jpg
 tags: ["图像描述", "多模态大模型", "视觉定位"]
 category: 论文阅读
 draft: false
