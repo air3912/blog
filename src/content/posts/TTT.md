@@ -44,9 +44,7 @@ ICLR 2026的LaCT，TTT落地的最后一块拼图，会有这么巧的事吗，�
 
 ## final
 
-以上是我认为如果想了解TTT相关领域至少要看的三篇
-
-## 论文链接
+以上是我认为如果想了解TTT相关领域至少要看的三篇，然后论文链接：（超级推荐
 
 1. [Test-Time Training with Self-Supervision for Generalization under Distribution Shifts](https://proceedings.mlr.press/v119/sun20b.html)
 2. [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](https://arxiv.org/abs/2407.04620)
