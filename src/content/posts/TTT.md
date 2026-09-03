@@ -42,10 +42,17 @@ ICLR 2026的LaCT，TTT落地的最后一块拼图，会有这么巧的事吗，�
 
 所以呢就是这里全局注意力是用的是SWA（sliding Window Attention，计算注意力时只和最近w个K/V做attention。），通过SWA实现简单的causal，然后这个长度w>=chunk长度
 
-## final
+## Final
 
 以上是我认为如果想了解TTT相关领域至少要看的三篇，然后论文链接：（超级推荐
 
 1. [Test-Time Training with Self-Supervision for Generalization under Distribution Shifts](https://proceedings.mlr.press/v119/sun20b.html)
 2. [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](https://arxiv.org/abs/2407.04620)
 3. [Test-Time Training Done Right](https://proceedings.iclr.cc/paper_files/paper/2026/hash/ffbfff81fb78e4bb558273b91e12e318-Abstract-Conference.html)
+
+
+## Appendix
+
+果然啊，距离产生美感，如果我对你的认知永远局限于这几篇paper所诉的表面的话，或许我会真的对你一直抱有幻想吧，哎，闹剧结束了，我不该过分期待的，一句话，TTT局限太严重了，至于实现我理想中的动态智能，目前直观感觉上看来是基本没戏的。
+
+让他记忆一整个视频是基本上就是不太可能的，算了，好聚好散，拿来做主心干不合理，但是应该也是有着些许作为外置工具的优势的吧
