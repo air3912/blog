@@ -11,8 +11,19 @@ import { siteConfig } from "./siteConfig";
 const getDynamicNavBarConfig = (): NavBarConfig => {
 	// 基础导航栏链接
 	const links: (NavBarLink | LinkPreset)[] = [
-		// 主页
-		LinkPreset.Home,
+		// 从 Blog 返回 Galgame / 互动房间
+		{
+			name: "进入 Galgame",
+			url: "/",
+			icon: "material-symbols:stadia-controller",
+		},
+
+		// Blog
+		{
+			name: "Blog",
+			url: "/blog/",
+			icon: "material-symbols:article-outline",
+		},
 
 		// 归档
 		LinkPreset.Archive,

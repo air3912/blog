@@ -1,0 +1,70 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = "淡Air的世界",
+	description = "一段简短的故事，以及藏在房间里的个人主页。",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<meta name="theme-color" content="#17233d" />
+		<meta name="description" content={description} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<link rel="icon" href="/favicon/favicon.ico" />
+		<link rel="preload" as="image" href="/world/backgrounds/room-title.webp" fetchpriority="high" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+		<noscript>这个页面需要启用 JavaScript 才能进入互动房间。你仍然可以直接访问 <a href="/blog/">Blog</a>。</noscript>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+		color-scheme: dark;
+		background: #17233d;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		width: 100%;
+		min-height: 100%;
+		margin: 0;
+		background: #17233d;
+	}
+
+	body {
+		overflow: hidden;
+	}
+
+	button,
+	a {
+		font: inherit;
+	}
+
+	button {
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	noscript {
+		display: block;
+		padding: 2rem;
+		color: white;
+	}
+</style>

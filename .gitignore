@@ -37,3 +37,7 @@ Docs-Firefly/
 cache/
 package/
 .obsidian/
+
+# local Galgame art explorations; approved and final sources remain versioned
+art-source/world/concepts/
+art-source/world/generated/
