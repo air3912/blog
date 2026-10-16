@@ -11,7 +11,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="world-page">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -31,38 +31,40 @@ const {
 </html>
 
 <style is:global>
-	:root {
+	html.world-page {
 		font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
 		color-scheme: dark;
 		background: #17233d;
 	}
 
-	* {
+	html.world-page *,
+	html.world-page *::before,
+	html.world-page *::after {
 		box-sizing: border-box;
 	}
 
-	html,
-	body {
+	html.world-page,
+	html.world-page body {
 		width: 100%;
 		min-height: 100%;
 		margin: 0;
 		background: #17233d;
 	}
 
-	body {
+	html.world-page body {
 		overflow: hidden;
 	}
 
-	button,
-	a {
+	html.world-page button,
+	html.world-page a {
 		font: inherit;
 	}
 
-	button {
+	html.world-page button {
 		-webkit-tap-highlight-color: transparent;
 	}
 
-	noscript {
+	html.world-page noscript {
 		display: block;
 		padding: 2rem;
 		color: white;
